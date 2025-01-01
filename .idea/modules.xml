@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/jujutsu-kaisen-rpg.iml" filepath="$PROJECT_DIR$/.idea/jujutsu-kaisen-rpg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jujutsu-kaisen-rpg.main.iml" filepath="$PROJECT_DIR$/.idea/modules/jujutsu-kaisen-rpg.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jujutsu-kaisen-rpg.test.iml" filepath="$PROJECT_DIR$/.idea/modules/jujutsu-kaisen-rpg.test.iml" />
     </modules>
   </component>
 </project>
