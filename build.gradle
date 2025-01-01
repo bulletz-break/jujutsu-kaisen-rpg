@@ -113,14 +113,9 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    // Put repositories for dependencies here
-    // ForgeGradle automatically adds the Forge maven and Maven Central for you
-
-    // If you have mod jar dependencies in ./libs, you can declare them as a repository like so.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:flat_dir_resolver
-    // flatDir {
-    //     dir 'libs'
-    // }
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 dependencies {
@@ -130,6 +125,14 @@ dependencies {
     // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    implementation fg.deobf("curse.maven:jujutsu_craft-471288:5840968") // erro ocorre quando eu implemento este mod
+    implementation fg.deobf("curse.maven:geckolib-388172:6027567")
+    implementation fg.deobf("curse.maven:player_animator-658587:4587214")
+    implementation fg.deobf("curse.maven:ftb_library-404465:6016763")
+    implementation fg.deobf("curse.maven:ftb_teams-404468:5267190")
+    implementation fg.deobf("curse.maven:ftb_quests-289412:5816794")
+    implementation fg.deobf("curse.maven:architectury_api-419699:5137938")
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
@@ -147,7 +150,6 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
-
 mixin {
     // MixinGradle Settings
     add sourceSets.main, 'mixins.jujutsucraftrpg.refmap.json'
